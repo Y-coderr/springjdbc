@@ -25,6 +25,17 @@ public class App
 
         int result = studentDao.insert(student);
         System.out.println("Student added"+result);
+
+
+        //Updating student with new object
+        Student student1 = new Student();
+
+        student1.setId(4);
+        student1.setName("Raj Kumar");
+        student1.setCity("Haidrabad");
+
+        int result1 = studentDao.change(student1);
+        System.out.println("Number of datachanged "+result1);
         //JdbcTemplate template = context.getBean("jdbcTemplate", JdbcTemplate.class);
         
         //Insert Query
