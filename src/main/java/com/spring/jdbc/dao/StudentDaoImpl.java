@@ -19,6 +19,13 @@ public class StudentDaoImpl implements StudentDao {
         return r;
     }
 
+    @Override
+    public int delete(int studentID) {
+        String query = "DELETE from student where id=?";
+        int r =this.jdbcTemplate.update(query,studentID);
+        return r;
+    }
+
     public JdbcTemplate getJdbcTemplate() {
         return jdbcTemplate;
     }

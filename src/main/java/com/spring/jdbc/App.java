@@ -36,6 +36,14 @@ public class App
 
         int result1 = studentDao.change(student1);
         System.out.println("Number of datachanged "+result1);
+
+
+        //Deleting student with new object
+        Student student2 = new Student();
+
+        int result2 = studentDao.delete(4);
+        System.out.println("Number of row deleted "+result2);
+
         //JdbcTemplate template = context.getBean("jdbcTemplate", JdbcTemplate.class);
         
         //Insert Query
