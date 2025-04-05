@@ -44,6 +44,9 @@ public class App
         int result2 = studentDao.delete(4);
         System.out.println("Number of row deleted "+result2);
 
+        //Selecting student
+        studentDao.getStudent()
+
         //JdbcTemplate template = context.getBean("jdbcTemplate", JdbcTemplate.class);
         
         //Insert Query
