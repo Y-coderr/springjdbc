@@ -6,6 +6,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 
+import java.util.List;
+
 /**
  * Hello world!
  *
@@ -46,6 +48,12 @@ public class App
 
         //Selecting student
         studentDao.getStudent(222);
+
+        //selecting multiple student
+        List<Student> students = studentDao.getStudents();
+        for (Student s : students){
+            System.out.println(s);
+        }
 
         //JdbcTemplate template = context.getBean("jdbcTemplate", JdbcTemplate.class);
         
